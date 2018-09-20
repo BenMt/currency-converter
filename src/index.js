@@ -1,8 +1,11 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 
+import App from './components/App'
+
+// Inject App component in the #app div
 ReactDOM.render(
-  <p>Hello world</p>,
+  <App />,
   document.getElementById('app')
 );
 
