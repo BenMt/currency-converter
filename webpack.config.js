@@ -1,10 +1,11 @@
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.js', // 
   output: {
-    path: __dirname + '/dist',
+    path: __dirname + '/dist', 
     publicPath: '',
     filename: 'bundle.js'
   },
@@ -25,16 +26,15 @@ module.exports = {
       }
     ]
   },
-  resolve: {
-    extensions: ['*', '.js', '.jsx']
-  },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
+    new Dotenv(), // to use .env file
+    new webpack.HotModuleReplacementPlugin(), // allow hot reloading
     new HtmlWebPackPlugin({
       template: "./src/index.html",
       filename: "./index.html"
     })
   ],
+  // webpack dev server settings
   devServer: {
     contentBase: './dist',
     hot: true

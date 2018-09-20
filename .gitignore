@@ -1,4 +1,5 @@
 dist
+.env
 
 # nodejs
 node_modules
