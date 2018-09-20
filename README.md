@@ -1,4 +1,4 @@
-# O'clock - Currency conversion app
+# O'clock - Currency converter app
 
 Basic app to convert currencies.
 
