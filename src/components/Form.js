@@ -48,11 +48,10 @@ class Form extends React.Component {
   };
 
   handleChangeAmount = position => event => {
-    const otherPosition = position => 
-      position === 'top'
-        ? 'bottom'
-        : 'top';
-    const newAmount = parseInt(event.target.value, 10); // parseInt to be sure to get number and not string
+    const otherPosition = position === 'top'
+      ? 'bottom'
+      : 'top';
+    const newAmount = parseInt(event.target.value || 0, 10); // parseInt to be sure to get number and not string
 
     // update the state
     this.setState(prevState => ({
